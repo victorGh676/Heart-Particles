@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Heart-Particles.css">
+    <title>Corazón partículas</title>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <button class="start-btn" onclick="playAudio()">Empezar</button>
+
+    <!-- Reproductor de audio oculto -->
+    <audio id="audio" src="audio.mp3"></audio>
+
+    <script src="Heart-Particles.js"></script>
+    <script>
+      // Función para reproducir el audio
+      function playAudio() {
+        const audio = document.getElementById('audio');
+        audio.play().catch(error => {
+          console.error('Error al reproducir el audio:', error);
+        });
+      }
+    </script>
+  </body>
+</html>
